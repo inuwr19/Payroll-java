@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox spacing="15" alignment="CENTER" xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml" fx:controller="com.ivanka.controllers.LoginController"
+      style="-fx-background-color: #f4f4f4; -fx-padding: 40; -fx-border-radius: 10; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.2, 0, 4);">
+    
+    <!-- Header -->
+    <Label text="Sistem Penggajian" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+    <!-- Username Field -->
+    <TextField fx:id="usernameField" promptText="Username" style="-fx-pref-width: 250px; -fx-font-size: 14px; -fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 5; -fx-background-radius: 5;" />
+    
+    <!-- Password Field -->
+    <PasswordField fx:id="passwordField" promptText="Password" style="-fx-pref-width: 250px; -fx-font-size: 14px; -fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 5; -fx-background-radius: 5;" />
+    
+    <!-- Login Button -->
+    <Button fx:id="loginButton" text="Login" onAction="#handleLogin" 
+            style="-fx-pref-width: 250px; -fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white; -fx-background-color: #0078d7; -fx-border-radius: 5; -fx-background-radius: 5; -fx-cursor: hand;" />
+    
+    <!-- Error Message -->
+    <Label fx:id="errorMessage" text="" style="-fx-text-fill: red; -fx-font-size: 12px;" />
+</VBox>

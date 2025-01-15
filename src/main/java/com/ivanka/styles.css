@@ -1,0 +1,15 @@
+/* CSS untuk hover efek */
+.button {
+    -fx-pref-width: 250px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #0078d7;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #005fa1;
+}

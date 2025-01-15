@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.ivanka.controllers.DashboardController">
+    <!-- Layout Utama -->
+    <VBox spacing="20" alignment="CENTER" style="-fx-background-color: #f9f9f9; -fx-padding: 20;">
+        
+        <!-- Label untuk Menampilkan Nama dan Role -->
+        <Label fx:id="welcomeLabel" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+        <Label fx:id="roleLabel" style="-fx-font-size: 18px; -fx-text-fill: #666;" />
+        
+        <!-- Label untuk Menampilkan Statistik -->
+        <Label fx:id="attendanceLabel" style="-fx-font-size: 18px; -fx-text-fill: #333;" />
+        <Label fx:id="salaryLabel" style="-fx-font-size: 18px; -fx-text-fill: #333;" />
+        
+        <!-- Label untuk Menampilkan Sisa Cuti -->
+        <Label fx:id="leaveBalanceLabel" style="-fx-font-size: 18px; -fx-text-fill: #333;" />
+        
+        <!-- Label untuk Menampilkan Status Cuti / Absen -->
+        <Label fx:id="statusMessageLabel" style="-fx-font-size: 16px; -fx-text-fill: #e74c3c;" />
+        
+        <!-- DatePicker dan Button Request Cuti -->
+        <HBox spacing="15" alignment="CENTER">
+            <DatePicker fx:id="leaveDatePicker" promptText="Pilih Tanggal Cuti" style="-fx-pref-width: 200px; -fx-font-size: 14px;" />
+            <Button fx:id="leaveButton" text="Request Cuti" onAction="#handleLeaveRequest" style="-fx-pref-width: 150px; -fx-font-size: 14px;" />
+        </HBox>
+        
+        <!-- Tombol untuk Absensi -->
+        <Button fx:id="attendanceButton" text="Absensi" onAction="#handleAttendance" style="-fx-pref-width: 200px; -fx-font-size: 14px; -fx-background-color: #4CAF50; -fx-text-fill: white;" />
+        
+        <!-- Tombol Logout -->
+        <Button text="Logout" layoutX="100" layoutY="260" onAction="#handleLogout" style="-fx-pref-width: 200px; -fx-font-size: 14px; -fx-background-color: #f44336; -fx-text-fill: white;"/>
+    </VBox>
+</AnchorPane>
