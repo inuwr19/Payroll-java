@@ -45,7 +45,8 @@ public class ManageEmployeesController {
         setupActionColumn();
 
         // Populate status ComboBox
-        statusComboBox.setItems(FXCollections.observableArrayList("tetap", "freelance"));
+        // statusComboBox.setItems(FXCollections.observableArrayList("tetap", "freelance"));
+        statusComboBox.setItems(FXCollections.observableArrayList("tetap"));
     }
 
     private void loadEmployees() {
@@ -98,7 +99,7 @@ public class ManageEmployeesController {
         String name = nameField.getText();
         String status = statusComboBox.getValue();
         String baseSalary = baseSalaryField.getText();
-        String hourlyRate = hourlyRateField.getText();
+        // String hourlyRate = hourlyRateField.getText();
         String leaveBalance = leaveBalanceField.getText();
         String username = usernameField.getText();
         String password = passwordField.getText();
@@ -111,7 +112,7 @@ public class ManageEmployeesController {
         try (Connection conn = DatabaseConnection.getConnection()) {
             // Query untuk menambahkan karyawan ke tabel employees
             String employeeQuery = "INSERT INTO employees (name, status, base_salary, hourly_rate, leave_balance, username, password) " +
-                                    "VALUES (?, ?, ?, ?, ?, ?, ?)";
+                                    "VALUES (?, ?, ?, 0, ?, ?, ?)";
             
             // Query untuk menambahkan user ke tabel users
             String userQuery = "INSERT INTO users (username, password, role_id, employee_id, created_at) " +
@@ -133,10 +134,10 @@ public class ManageEmployeesController {
                 employeeStmt.setString(1, name);
                 employeeStmt.setString(2, status);
                 employeeStmt.setBigDecimal(3, baseSalary.isEmpty() ? null : new BigDecimal(baseSalary));
-                employeeStmt.setBigDecimal(4, hourlyRate.isEmpty() ? null : new BigDecimal(hourlyRate));
-                employeeStmt.setInt(5, leaveBalance.isEmpty() ? 0 : Integer.parseInt(leaveBalance));
-                employeeStmt.setString(6, username);
-                employeeStmt.setString(7, password);
+                // employeeStmt.setBigDecimal(4, hourlyRate.isEmpty() ? null : new BigDecimal(hourlyRate));
+                employeeStmt.setInt(4, leaveBalance.isEmpty() ? 0 : Integer.parseInt(leaveBalance));
+                employeeStmt.setString(5, username);
+                employeeStmt.setString(6, password);
                 employeeStmt.executeUpdate();
         
                 // Mendapatkan ID karyawan yang baru saja ditambahkan
@@ -202,7 +203,7 @@ public class ManageEmployeesController {
     private void clearForm() {
         nameField.clear();
         baseSalaryField.clear();
-        hourlyRateField.clear();
+        // hourlyRateField.clear();
         leaveBalanceField.clear();
         usernameField.clear();
         passwordField.clear();

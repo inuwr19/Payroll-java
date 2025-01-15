@@ -17,17 +17,17 @@
             <Label text="Base Salary:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
             <TextField fx:id="baseSalaryField" promptText="For permanent employees" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-            <Label text="Hourly Rate:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-            <TextField fx:id="hourlyRateField" promptText="For freelance employees" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <!-- <Label text="Hourly Rate:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="hourlyRateField" promptText="For freelance employees" GridPane.columnIndex="1" GridPane.rowIndex="3" /> -->
 
-            <Label text="Leave Balance:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-            <TextField fx:id="leaveBalanceField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Leave Balance:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="leaveBalanceField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
-            <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
-            <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
-            <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
-            <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
 
             <Button text="Add Employee" onAction="#handleAddEmployee" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
         </GridPane>
